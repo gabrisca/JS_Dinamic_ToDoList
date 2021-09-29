@@ -1,0 +1,152 @@
+/* * GENERAL * */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url(./bg.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+  font-family: "Gemunu Libre", sans-serif;
+}
+
+.container {
+  width: 90%;
+  padding: 80px 20px;
+  background: transparent;
+}
+
+/* * HEADER * */
+header {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px 0px;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+/* * FORM SECTION * */
+form {
+  text-align: center;
+}
+
+form input {
+  width: 80%;
+  padding: 7px 20px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #030303;
+  border-radius: 5px;
+  background: rgba(204, 200, 200, 0.507);
+  transition: all 0.3s ease-in;
+  font-size: larger;
+}
+
+form input::placeholder {
+  color: #000000;
+}
+form input:focus {
+  background: rgb(255, 255, 255);
+}
+
+ul {
+  width: 80%;
+  height: 100%;
+  margin: 10px auto;
+  padding: 2%;
+  text-align: left;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+ul li {
+  width: 95%;
+  margin: 10px auto;
+  position: relative;
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  word-wrap: break-word;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+ul li:nth-child(odd) {
+  background: #fcab3e;
+  width: 100%;
+}
+
+ul li:nth-child(even) {
+  background: #739ff9;
+  width: 95%;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+}
+
+ul li:before {
+  content: "✽";
+  padding: 0.6rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+ul li:after {
+  opacity: 0;
+}
+
+ul li:hover:after {
+  content: " ✔ segna come completato";
+  opacity: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-style: italic;
+  animation: pseudoClassAnim 1s forwards;
+}
+
+ul li.checked {
+  background: rgba(128, 128, 128, 0.623);
+}
+
+ul li.checked:before {
+  font-family: "Font Awesome\ 5 Free";
+  content: " ✔";
+  font-weight: 400;
+  padding: 10px 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+ul li.checked:hover:after {
+  content: " \274C clicca per eliminare";
+  font-size: 1.1rem;
+  color: #fd4a1d;
+  opacity: 0;
+}
+
+/* * FOOTER * */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fa6c40;
+  color: white;
+  text-align: center;
+  padding: 3px;
+}
+
+/* * KEYFRAMES * */
+@keyframes pseudoClassAnim {
+  to {
+    opacity: 1;
+  }
+}
