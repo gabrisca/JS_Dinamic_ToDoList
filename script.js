@@ -12,7 +12,7 @@ const form = document.querySelector('form'),
 // evento che inserisce dinamicamente un li con il testo inserito nell'input
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (item.value != '') {
+  if (item.value.trim() != '') {
     list.innerHTML += `<li>${item.value}</li>`;
     storage();
     item.value = '';
@@ -33,7 +33,7 @@ list.addEventListener('click', (e) => {
 
 // * Functions
 // ! storage
-// funzione che salva nella local storage i valori inseriti nella todolist
+// funzione che salva nel local storage i valori inseriti nella todolist
 function storage() {
   window.localStorage.todoList = list.innerHTML;
 }
